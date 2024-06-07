@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_lista_agendamento.css">
+    <title>Lista de Agendamentos</title>
+</head>
+<body>
+    <header>
+        <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+    </header>
+
+    <div >
+        <nav>
+            <form action = "/pacientes">
+                <button type = "submit">INSERÇÃO DE PACIENTES</button>
+            </form>
+            <form action = "/agendamento_consultas">
+                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
+            </form>
+            <form action = "/idade_humana">
+                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+            </form>
+            <form action = "/medicamento">
+                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+            </form>
+            <form action = "/quantidade_mililitros_soro">
+                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+            </form>
+        </nav>
+    </div>
+
+    <h1>LISTA DE AGENDAMENTOS</h1>
+    <ul>
+        {% for agenda in agendamento %}
+        <li>{{ agenda[1] }} - {{ agenda[2] }} - {{ agenda[3] }} - {{ agenda[4] }} - {{ agenda[5] }}
+            <ul>
+                <li><a href="/cancelamento_consultas/{{ loop.index0 }}">APAGAR</a></li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/agendamento_consultas">ADICIONAR AGENDAMENTO</a>
+</body>
+</html>

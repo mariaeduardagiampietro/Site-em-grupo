@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_medicamento.css">
+    <title>Calculadora- Dose do Medicamento</title>
+</head>
+<body>
+    <header>
+        <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+    </header>
+
+    <div >
+        <nav>
+            <form action = "/pacientes">
+                <button type = "submit">INSERÇÃO DE PACIENTES</button>
+            </form>
+            <form action = "/agendamento_consultas">
+                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
+            </form>
+            <form action = "/idade_humana">
+                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+            </form>
+            <form action = "/medicamento">
+                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+            </form>
+            <form action = "/quantidade_mililitros_soro">
+                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+            </form>
+        </nav>
+    </div>
+
+    <h1>CALCULE A MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO</h1>
+    <form action = "/verificar_medicamento" method = "POST">
+        <label for="peso_animal">Informe o peso do animal em kg:</label>
+        <input type = "number" id="peso_animal" name="peso_animal" step = "0.01" required>
+        <label for="dose_recomendada">Informe a dose recomendada em mg/kg:</label>
+        <input type="number" id="dose_recomendada" name="dose_recomendada" required>
+        <button type="submit">CALCULAR</button>
+    </form>
+    <div id = "medicamento_python">
+        {% if medicamento_python %}
+            <p> {{ medicamento_python }} </p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_pacientes.css">
+    <title>Inserção de Pacientes</title>
+</head>
+<body>
+    <header>
+        <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+        <div class="menu">
+            <a href = "/pacientes">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">INSERÇÃO DE PACIENTES</button>
+            </a>
+ 
+            <p class="frase">COMPROMETIDOS COM A SAÚDE E FELICIDADE DE SEU PET!</p>
+           
+            <a href = "/agendamento_consultas">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">AGENDAMENTO DE CONSULTAS</button>
+            </a>
+        </div>
+    </header>
+ 
+    <div class="linha"></div>
+ 
+    <div class="fundo">
+        <nav class="espacamento">
+            <form action = "/idade_humana">
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+            </form>
+            <form action = "/medicamento">
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+            </form>
+            <form action = "/quantidade_mililitros_soro">
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILILITROS DE SORO)</button>
+            </form>
+        </nav>
+    </div>
+ 
+    <div class="linha"></div>
+
+    <div class= "azul">
+    <div class='divao'>
+         <h1 class="titulo1">INSERÇÃO DE PACIENTES</h1>
+    </div>
+            <div class= "container">
+            
+                <form action="/verificar_pacientes" method = "post">
+                    <div>
+                        <div class="grupo">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        <div class="grupo">
+                            <label for="especie">Espécie:</label>
+                            <input type="text" id="especie" name="especie">
+                        </div>
+                        <div class="grupo">
+                            <label for="raca">Raça:</label>
+                            <input type="text" id="raca" name="raca">
+                        </div>
+                        <div class="grupo">
+                            <label for="raca">Raça:</label>
+                            <input type="text" id="raca" name="raca">
+                        </div>
+                        <div class="grupo">
+                            <label for="peso">Peso:</label>
+                            <input type="number" id="peso" name="peso" step = "0.01" required>
+                        </div>
+                        <div class="grupo">
+                            <label for="nome_tutor">Nome do tutor:</label>
+                            <input type="text" id="nome_tutor" name="nome_tutor">
+                        </div>
+                        <div class="grupo">
+                            <label for="telefone">Telefone:</label>
+                            <input type="number" id="telefone" name="telefone">
+                        </div>
+                        <div class="button">
+                            <button type="submit">PRONTO</button>
+                        </div>
+                    </div>          
+                </form>
+            </div>
+
+
+            <div class="fundo_rodape" style="padding-top: 55px;">
+                
+                <div class="fundo_rodape" style="padding-top: 55px;">
+                    <div>
+                        <img style = "width: 350px; padding-left: 50px;" src = "static/img/localizacao.png" alt = "Localização"/>
+                    </div>
+                    <div>
+                        <img style = "width: 250px; padding-left: 40px;" src = "static/img/instagram.png" alt = "Instagram"/>
+                        <img style = "width: 250px; padding-left: 40px;" src = "static/img/facebook.png" alt = "Facebook"/>
+                    </div>
+                    <div>
+                        <img src = "static/img/whatsapp.png" alt = "WhatsApp"/>
+                        <img src = "static/img/telefone.png" alt = "Telefone"/>
+                    </div>
+                        <img class="img_rod" src = "static/img/rodape.png" alt = "Imagem de Animais"/>
+                </div>
+            
+            </div>
+            <footer>
+                <p>© Clínica Veterinária Dog Dodói - Todos os direitos reservados | Desenvolvido por: Gabriela F. Jesuino, Maria Eduarda G. dos Santos, Giovana B. Pereira e Ana Luiza Pereira</p>
+            </footer>
+
+</body>
+</html>

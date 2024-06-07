@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_idade.css">
+    <title>Calculadora - Idade Humana do Animal</title>
+</head>
+<body>
+    <header>
+        <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+    </header>
+
+    <div >
+        <nav>
+            <form action = "/pacientes">
+                <button type = "submit">INSERÇÃO DE PACIENTES</button>
+            </form>
+            <form action = "/agendamento_consultas">
+                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
+            </form>
+            <form action = "/idade_humana">
+                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+            </form>
+            <form action = "/medicamento">
+                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+            </form>
+            <form action = "/quantidade_mililitros_soro">
+                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+            </form>
+        </nav>
+    </div>
+
+    <h1>CALCULE A IDADE HUMANA DO SEU ANIMAL</h1>
+    <form action = "/verificar_idade" method = "post">
+        <label for="especie">Informe a espécie do animal (gato ou cachorro):</label>
+        <select name = "especie" id = "especie">
+            <option value = "Gato">Gato</option>
+            <option value = "Cachorro">Cachorro</option>
+        </select>
+        <label for="idade">Informe a idade do animal:</label>
+        <input type="number" id="idade" name="idade" required>
+        <button type="submit">CALCULAR</button>
+    </form>
+    <div id = "idade_humana_python">
+        {% if idade_humana_python %}
+            <p> {{ idade_humana_python }} </p>
+        {% endif %}
+    </div>
+</body>
+</html>
